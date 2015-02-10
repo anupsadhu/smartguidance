@@ -1,0 +1,22 @@
+Options -Indexes
+ErrorDocument 403 /error.php
+RewriteEngine on
+
+# Prevent users opening PHP code
+<Files "*.inc">
+        Order allow,deny
+        Deny from all
+</Files>
+
+#Rewriterule
+RewriteRule ^home               index.php [QSA,L,NC]
+RewriteRule ^aboutus$           about.php [QSA,L,NC]
+RewriteRule ^jobsearch$         jobsearch.php [QSA,L,NC]
+RewriteRule ^exam-overview$     examoverview.php [QSA,L,NC]
+RewriteRule ^exam-guidance$     examguidance.php [QSA,L,NC]
+RewriteRule ^courses$           courses.php [QSA,L,NC]
+RewriteRule ^subject-notes$     notes.php [QSA,L,NC]
+RewriteRule ^contactus$         contact.php [QSA,L,NC]
+RewriteRule ^userregistration$  userregistration.php [QSA,L,NC]
+
+#RewriteRule ^mocktest       mocktest/index.php [QSA,L,NC]
